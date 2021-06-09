@@ -879,7 +879,7 @@ contract LockProxyGroup is Ownable {
         for (uint i=0; i<groupTokenNum; i++) {
             if (tokenChainIds[i] == chainId) { 
                 address thisToken = Utils.bytesToAddress(tokenAddrs[i]);
-                groupBalance[thisToken][newKey] ==  groupBalance[thisToken][oldKey];
+                groupBalance[thisToken][newKey] = groupBalance[thisToken][oldKey];
                 delete groupBalance[thisToken][oldKey];
             }
             groupTokenHashMap[newKey][tokenChainIds[i]] = tokenAddrs[i];
